@@ -1,0 +1,126 @@
+.container {
+  width: 30em;
+  min-height: 1.5em;
+  background-color: #fff;
+  position: relative;
+  border: 0.09em solid #ccc;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+}
+
+.container:hover {
+  border-color: #b3b3b3;
+}
+
+.container:focus {
+  border-color: #0075ff;
+}
+
+.value {
+  flex-grow: 1;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+.clear-btn {
+  background: none;
+  color: #ccc;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.75em;
+}
+
+.clear-btn:focus,
+.clear-btn:hover {
+  color: #333;
+}
+
+.divider {
+  background-color: #ccc;
+  align-self: stretch;
+  width: 0.05em;
+}
+
+.caret {
+  translate: 0 15%;
+}
+
+.caret svg {
+  fill: #ccc;
+  stroke: #ccc;
+}
+
+.options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  max-height: 15em;
+  overflow-y: auto;
+  border: 0.05em solid #ccc;
+  border-radius: 0.25em;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25em);
+  background-color: #fff;
+  z-index: 100;
+}
+
+.options.show {
+  display: block;
+}
+
+.option {
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  text-align: left;
+}
+
+.option.highlighted {
+  background-color: #deebff;
+}
+
+.option.selected {
+  background-color: #2684ff;
+  color: #fff;
+  cursor: default;
+}
+
+.option-badge {
+  display: flex;
+  align-items: center;
+  border: 0.05em solid #ccc;
+  border-radius: 0.25em;
+  padding: 0 0 0 6px;
+  background: #e6e6e6;
+  outline: none;
+  gap: 0.25em;
+}
+
+.option-badge > .remove-btn:focus,
+.option-badge > .remove-btn:hover {
+  background-color: rgb(255, 189, 173);
+  color: rgb(222, 53, 11);
+  background-color: hsl(0, 100%, 90%);
+  cursor: pointer;
+}
+
+.option-badge > .remove-btn {
+  font-size: 1.25em;
+  color: #253858;
+  padding: 3px 4px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  max-width: 22px;
+  width: 22px;
+}
